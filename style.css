@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #1a1a1a);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #0d0d0d;
+    padding: 20px 10px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .sidebar li {
+    font-size: 14px;
+    cursor: default;
+    color: #aaa;
+  }
+  
+  .sidebar li.active {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .container {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input[type="email"] {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  input[type="email"]:invalid {
+    border: 2px solid #ff4d4d;
+  }
+  
+  .error-msg {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 5px;
+    height: 14px;
+  }
+  
+  button {
+    padding: 12px;
+    background-color: #6200ee;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4b00b3;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    .sidebar {
+      width: 60px;
+      padding: 10px 5px;
+    }
+  
+    .sidebar li {
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    .container {
+      margin-left: 60px;
+      width: calc(100% - 60px);
+      padding: 10px;
+    }
+  
+    form {
+      max-width: 100%;
+    }
+  }
+  
